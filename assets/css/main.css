@@ -202,6 +202,7 @@ body {
 .intro-left {
   flex: 1 1 300px;
   max-width: 850px;
+  
 }
 
 .intro h1 {
@@ -212,6 +213,9 @@ body {
   color: #23243A;
 }
 
+#typed-text{
+  color: #4176FF;
+}
 /* Right-side container for image */
 .intro-right {
   flex: 0 0 auto;
@@ -1900,7 +1904,7 @@ body {
 /* Image */
 .project-img {
   width: calc(100% - 1.4rem);
-  height: 180px;
+  height: 170px;
   border-radius: 8px;
   margin: 0.6rem;
   object-fit: cover;
@@ -1908,7 +1912,8 @@ body {
 
 /* Content */
 .project-content {
-  padding: 14px;
+  padding:10px;
+  padding-bottom: 30px;
   flex: 1;
   display: flex;
   flex-direction: column;

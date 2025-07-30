@@ -73,9 +73,9 @@
       <div class="intro">
         <div class="intro-left">
           <h1>
-            Hello,<br />
-            I am Gaurav Kulkarni
-          </h1>
+  Hello,<br />
+  I am <span id="typed-text"></span><span id="cursor">|</span>
+</h1>
           <div class="divider"></div>
           <div class="subtitle">
             <p>
@@ -206,176 +206,92 @@
 
 
     <!-- Projects Section   -->
-    <!-- Projects Section   -->
     <section class="projects-section" id="projects">
-        <h2 class="section-title">My Projects</h2>
-        <p class="section-subtitle">Explore a collection of my recent work across various technologies and domains.</p>
-      
-        <div class="filter-search-container">
-            <div class="filters">
-              <button class="filter-btn active" data-filter="all">All Projects</button>
-              <button class="filter-btn" data-filter="ai">AI & ML</button>
-              <button class="filter-btn" data-filter="ai">Data Engineering</button>
-              <button class="filter-btn" data-filter="web">Web Development</button>
-            </div>
-            <input type="text" id="searchBox" placeholder="🔍 Search projects..." />
-          </div>
-          
-      
-        <div class="projects-grid" id="projectList">
-          <div class="project-card" data-tags="...">
-  <div class="card-inner">
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-subtitle">Explore a collection of my recent work across various technologies and domains.</p>
 
-    <!-- FRONT -->
-    <div class="card-front">
-      <img src="assets/img/SQL_Project.png" class="project-img" alt=""/>
-      <div class="project-content">
-        <h3>Income Tax Fraud Detection</h3>
-        <p>Used AI to detect fraudulent income tax filings. Applied feature engineering & classification.</p>
-        <div class="tags"><span>Python</span><span>AI/ML</span></div>
-        <div class="tech-icons">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" />
+      <div class="filter-search-container">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai">AI & ML</button>
+          <button class="filter-btn" data-filter="data">Data Engineering</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
         </div>
-        <div class="project-links">
-          <a href="#">🔗 Source Code</a>
-          <a href="#">🌐 Live Demo</a>
-        </div>
+        <input type="text" id="searchBox" placeholder="🔍 Search projects..." />
       </div>
-    </div>
-    <!-- BACK -->
-    <div class="card-back">
-      <h3>Project Highlights</h3>
-      <ul>
-        <li>⚡ Feature Engineering</li>
-        <li>⚡ 92% Classification Accuracy</li>
-        <li>⚡ Built with TensorFlow, Pandas</li>
-      </ul>
-      <div class="project-links">
-        <a href="#">🔗 Source Code</a>
-        <a href="#">🌐 Live Demo</a>
-      </div>
-    </div>
 
-  </div>
-</div>
 
-          <div class="project-card" data-tags="ai python deep-learning ml">
-            <img src="assets/img/Data-science.png" class="project-img" alt=""/>
-            <div class="project-content">
-              <h3>Income Tax Fraud Detection</h3>
-              <p>Used AI to detect fraudulent income tax filings. Applied feature engineering & classification.</p>
-              <div class="tags"><span>Python</span><span>AI/ML</span></div>
-              <div class="tech-icons">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" />
-              </div>
-              <div class="project-links">
-                <a href="#">🔗 Source Code</a>
-                <a href="#">🌐 Live Demo</a>
-              </div>
+      <div class="projects-grid" id="projectList">
+        <div class="project-card" data-tags="web javascript ecommerce node react">
+          <img src="assets/img/Data-science.png" class="project-img" alt="" />
+          <div class="project-content">
+            <h3>E-commerce Platform</h3>
+            <p>Built a scalable full-stack eCommerce platform with React & Node.js.</p>
+            <div class="tags"><span>React</span><span>Node</span><span>Web</span></div>
+            <div class="tech-icons">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
             </div>
-          </div>
-      
-          <div class="project-card" data-tags="web javascript ecommerce node react">
-            <img src="assets/img/Data-science.png" class="project-img" alt=""/>
-            <div class="project-content">
-              <h3>E-commerce Platform</h3>
-              <p>Built a scalable full-stack eCommerce platform with React & Node.js.</p>
-              <div class="tags"><span>React</span><span>Node</span><span>Web</span></div>
-              <div class="tech-icons">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-              </div>
-              <div class="project-links">
-                <a href="#">🔗 Source Code</a>
-                <a href="#">🌐 Live Demo</a>
-              </div>
-            </div>
-          </div>
-      
-          <div class="project-card" data-tags="data spark aws engineering">
-            <img src="assets/img/Data-science.png" class="project-img" alt=""/>
-            <div class="project-content">
-              <h3>ETL Data Pipeline</h3>
-              <p>Engineered a real-time data pipeline with Apache Spark & AWS Lambda.</p>
-              <div class="tags"><span>Data</span><span>AWS</span><span>ETL</span></div>
-              <div class="tech-icons">
-                
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" />
-              </div>
-              <div class="project-links">
-                <a href="#">🔗 Source Code</a>
-                <a href="#">🌐 Live Demo</a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-tags="web javascript ecommerce node react">
-            <img src="assets/img/Data-science.png" class="project-img" alt=""/>
-            <div class="project-content">
-              <h3>E-commerce Platform</h3>
-              <p>Built a scalable full-stack eCommerce platform with React & Node.js.</p>
-              <div class="tags"><span>React</span><span>Node</span><span>Web</span></div>
-              <div class="tech-icons">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-              </div>
-              <div class="project-links">
-                <a href="#">🔗 Source Code</a>
-                <a href="#">🌐 Live Demo</a>
-              </div>
-            </div>
-          </div>
-      
-          <div class="project-card" data-tags="data spark aws engineering">
-            <img src="assets/img/Data-science.png" class="project-img" alt=""/>
-            <div class="project-content">
-              <h3>ETL Data Pipeline</h3>
-              <p>Engineered a real-time data pipeline with Apache Spark & AWS Lambda.</p>
-              <div class="tags"><span>Data</span><span>AWS</span><span>ETL</span></div>
-              <div class="tech-icons">
-                
-              </div>
-              <div class="project-links">
-                <a href="#">🔗 Source Code</a>
-                <a href="#">🌐 Live Demo</a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-tags="web javascript ecommerce node react">
-            <img src="assets/img/Data-science.png" class="project-img" alt=""/>
-            <div class="project-content">
-              <h3>E-commerce Platform</h3>
-              <p>Built a scalable full-stack eCommerce platform with React & Node.js.</p>
-              <div class="tags"><span>React</span><span>Node</span><span>Web</span></div>
-              <div class="tech-icons">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-              </div>
-              <div class="project-links">
-                <a href="#">🔗 Source Code</a>
-                <a href="#">🌐 Live Demo</a>
-              </div>
-            </div>
-          </div>
-      
-          <div class="project-card" data-tags="data spark aws engineering">
-            <img src="assets/img/Data-science.png" class="project-img" alt=""/>
-            <div class="project-content">
-              <h3>ETL Data Pipeline</h3>
-              <p>Engineered a real-time data pipeline with Apache Spark & AWS Lambda.</p>
-              <div class="tags"><span>Data</span><span>AWS</span><span>ETL</span></div>
-              <div class="tech-icons">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" />
-              </div>
-              <div class="project-links">
-                <a href="#">🔗 Source Code</a>
-                <a href="#">🌐 Live Demo</a>
-              </div>
+            <div class="project-links">
+              <a href="#">🔗 Source Code</a>
+              <a href="#">🌐 Live Demo</a>
             </div>
           </div>
         </div>
+
+        <div class="project-card" data-tags="data spark aws engineering">
+          <img src="assets/img/Data-science.png" class="project-img" alt="" />
+          <div class="project-content">
+            <h3>ETL Data Pipeline</h3>
+            <p>Engineered a real-time data pipeline with Apache Spark & AWS Lambda.</p>
+            <div class="tags"><span>Data</span><span>AWS</span><span>ETL</span></div>
+            <div class="tech-icons">
+
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" />
+            </div>
+            <div class="project-links">
+              <a href="#">🔗 Source Code</a>
+              <a href="#">🌐 Live Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-tags="web javascript ecommerce node react">
+          <img src="assets/img/Data-science.png" class="project-img" alt="" />
+          <div class="project-content">
+            <h3>E-commerce Platform</h3>
+            <p>Built a scalable full-stack eCommerce platform with React & Node.js.</p>
+            <div class="tags"><span>React</span><span>Node</span><span>Web</span></div>
+            <div class="tech-icons">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+            </div>
+            <div class="project-links">
+              <a href="#">🔗 Source Code</a>
+              <a href="#">🌐 Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="data spark aws engineering">
+          <img src="assets/img/Data-science.png" class="project-img" alt="" />
+          <div class="project-content">
+            <h3>ETL Data Pipeline</h3>
+            <p>Engineered a real-time data pipeline with Apache Spark & AWS Lambda.</p>
+            <div class="tags"><span>Data</span><span>AWS</span><span>ETL</span></div>
+            <div class="tech-icons">
+
+            </div>
+            <div class="project-links">
+              <a href="#">🔗 Source Code</a>
+              <a href="#">🌐 Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
     </section>
 
 

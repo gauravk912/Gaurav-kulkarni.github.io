@@ -113,26 +113,74 @@ animateTechIcons();
 
 // Project Section
 // Project Filtering
-document.querySelectorAll('.filter-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-    const filter = button.getAttribute('data-filter');
+// document.querySelectorAll('.filter-btn').forEach(button => {
+//   button.addEventListener('click', () => {
+//     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+//     button.classList.add('active');
+//     const filter = button.getAttribute('data-filter');
+//     document.querySelectorAll('.project-card').forEach(card => {
+//       const tags = card.getAttribute('data-tags');
+//       card.style.display = (filter === 'all' || tags.includes(filter)) ? 'block' : 'none';
+//     });
+//   });
+// });
+
+// document.querySelectorAll('.filter-btn').forEach(button => {
+//   button.addEventListener('click', () => {
+//     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+//     button.classList.add('active');
+
+//     const filter = button.getAttribute('data-filter').toLowerCase();
+
+//     document.querySelectorAll('.project-card').forEach(card => {
+//       const tags = card.getAttribute('data-tags').toLowerCase().split(' ');
+//       const showCard = filter === 'all' || tags.includes(filter);
+//       card.style.display = showCard ? 'block' : 'none';
+//     });
+//   });
+// });
+
+
+// // Project Search
+// document.getElementById('searchBox').addEventListener('input', function () {
+//   const searchValue = this.value.toLowerCase();
+//   document.querySelectorAll('.project-card').forEach(card => {
+//     const text = card.innerText.toLowerCase();
+//     card.style.display = text.includes(searchValue) ? 'block' : 'none';
+//   });
+// });
+
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+  const searchBox = document.getElementById('searchBox');
+  let currentFilter = 'all';
+
+  function filterProjects() {
+    const searchValue = searchBox.value.toLowerCase();
+
     document.querySelectorAll('.project-card').forEach(card => {
-      const tags = card.getAttribute('data-tags');
-      card.style.display = (filter === 'all' || tags.includes(filter)) ? 'block' : 'none';
+      const tags = card.getAttribute('data-tags').toLowerCase().split(' ');
+      const text = card.innerText.toLowerCase();
+
+      const matchesFilter = currentFilter === 'all' || tags.includes(currentFilter);
+      const matchesSearch = text.includes(searchValue);
+
+      card.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+    });
+  }
+
+  // Handle filter button click
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      currentFilter = button.getAttribute('data-filter').toLowerCase();
+      filterProjects();
     });
   });
-});
 
-// Project Search
-document.getElementById('searchBox').addEventListener('input', function () {
-  const searchValue = this.value.toLowerCase();
-  document.querySelectorAll('.project-card').forEach(card => {
-    const text = card.innerText.toLowerCase();
-    card.style.display = text.includes(searchValue) ? 'block' : 'none';
-  });
-});
+  // Handle search input
+  searchBox.addEventListener('input', filterProjects);
 
 // Scroll Animation for project cards
 const cards = document.querySelectorAll('.project-card');
@@ -187,3 +235,49 @@ document.querySelectorAll('.project-card .card-back').forEach((card) => {
     });
   });
 
+
+const typedText = document.getElementById("typed-text");
+  const cursor = document.getElementById("cursor");
+
+  const phrases = [
+    "Gaurav Kulkarni",
+    "an AI/ML Enthusiast",
+    "Exploring Agentic AI"
+  ];
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+      charIndex--;
+      typedText.textContent = currentPhrase.substring(0, charIndex);
+    } else {
+      charIndex++;
+      typedText.textContent = currentPhrase.substring(0, charIndex);
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      // Pause before deleting
+      setTimeout(() => isDeleting = true, 1000);
+    } else if (isDeleting && charIndex === 0) {
+      // Move to next phrase
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+
+    const delay = isDeleting ? 50 : 100;
+    setTimeout(type, delay);
+  }
+
+  // Start typing on load
+  document.addEventListener("DOMContentLoaded", () => {
+    type();
+    // blinking cursor effect
+    setInterval(() => {
+      cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
+    }, 500);
+  });
