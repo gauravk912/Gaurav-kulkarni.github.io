@@ -153,11 +153,12 @@ body {
   font-weight: bold;
 }
 
-.leftSide{
-  margin-left: 150px;
-  padding-right: 50px;
+@media (min-width: 768px) {
+  .leftSide {
+    margin-left: 150px;
+    padding-right: 50px;
+  }
 }
-
 .main-content {
   /* margin-left: 166px; */
   /* margin-left: calc(86px + 2vw); */
@@ -516,7 +517,7 @@ body {
 }
 
 .philosophy-card .card-image img {
-  width: 300px;
+  width: 150px;
   height: auto;
   border-radius: 12px;
   margin-right: 24px;
@@ -600,7 +601,7 @@ body {
   transform: scale(1.02);
 }
 .card-image img {
-  width: 250px;
+  width: 170px;
   height: auto;
   border-radius: 12px;
   margin-right: 24px;
@@ -1081,7 +1082,7 @@ body {
 }
 
 .education-image img {
-  width: 200px;
+  width: 150px;
   height: auto;
   border-radius: 12px;
   margin-right: 24px;
