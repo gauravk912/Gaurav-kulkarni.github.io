@@ -168,3 +168,22 @@ const sections = document.querySelectorAll("section");
       }
     });
 });
+
+
+
+
+
+document.querySelectorAll('.project-card .card-front').forEach((img) => {
+    img.addEventListener('click', (e) => {
+      const card = e.target.closest('.project-card');
+      card.classList.toggle('flipped');
+    });
+  });
+
+document.querySelectorAll('.project-card .card-back').forEach((card) => {
+    card.addEventListener('click', (e) => {
+      const card = e.target.closest('.project-card');
+      card.classList.toggle('flipped');
+    });
+  });
+
