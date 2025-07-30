@@ -145,3 +145,26 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 cards.forEach(card => observer.observe(card));
+
+
+const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-items li");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((li) => {
+      li.classList.remove("active");
+      const anchor = li.querySelector("a");
+      if (anchor && anchor.getAttribute("href") === `#${current}`) {
+        li.classList.add("active");
+      }
+    });
+});

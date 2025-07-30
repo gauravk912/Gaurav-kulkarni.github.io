@@ -50,6 +50,10 @@ body {
   letter-spacing: 2px;
 }
 
+.g-avatar:active {
+  text-decoration: none !important;
+}
+
 .nav-items {
   list-style: none;
   padding: 0;
@@ -60,6 +64,7 @@ body {
   align-items: center;
   gap: 13px;
   justify-content: center;
+  text-decoration: none !important;
 }
 
 .nav-items li {
@@ -69,13 +74,36 @@ body {
   cursor: pointer;
   transition: color 0.18s;
   margin-bottom: 2px;
+  text-decoration: none;
+}
+.nav-items li a {
+  text-decoration: none !important;
+  color: inherit !important;
+  outline: none;
+}
+.nav-icon i {
+  font-size: 20px;
+  line-height: 1;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
 }
 
+.nav-items li a:visited,
+.nav-items li a:hover,
+.nav-items li a:focus,
+.nav-items li a:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
 .nav-icon {
   width: 44px;
   height: 44px;
   border-radius: 70%;
-  background: #EDF0F6;
+  background: #cdd0e1;
   color: #4B5876;
   display: flex;
   align-items: center;
@@ -87,12 +115,13 @@ body {
 
 .nav-label {
   font-size: 0.84rem;
-  color: #5B6376;
+  color: #a2a3a4;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.01em;
   transition: color 0.18s;
   margin-top: 1px;
+  text-decoration: none !important;  /* ✅ Removes underline */
 }
 
 .nav-items li.active .nav-icon,
@@ -116,6 +145,7 @@ body {
   letter-spacing: 0.01em;
   padding: 6px 0;
   width: 100%;
+  margin-bottom: 60px;
 }
 
 .nav-footer span {
@@ -123,8 +153,14 @@ body {
   font-weight: bold;
 }
 
+.leftSide{
+  margin-left: 150px;
+  padding-right: 50px;
+}
+
 .main-content {
-  margin-left: 166px;
+  /* margin-left: 166px; */
+  /* margin-left: calc(86px + 2vw); */
   padding: 200px 72px 32px 72px;
   min-height: 100vh;
   position: relative;
@@ -148,6 +184,7 @@ body {
   text-decoration: none;
   transition: background 0.22s, color 0.22s;
   box-shadow: 0 2px 6px rgba(65, 118, 255, 0.07);
+  z-index: 10000;
 }
 
 .download-cv-btn:hover {
@@ -174,7 +211,7 @@ body {
 
 
 .intro-right {
-  flex: 0 0 700px;
+  flex: 0 0 400px;
   display: flex;
   justify-content: flex;
   align-items: center;
@@ -587,15 +624,13 @@ body {
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  min-height: 320px;
 }
 .info-card:hover{
-
   box-shadow: 0 0 16px #4176FF;
   transform: scale(1.02);
 }
 .card-image img {
-  width: 460px;
+  width: 350px;
   height: auto;
   border-radius: 12px;
   margin-right: 24px;
@@ -619,8 +654,8 @@ body {
 }
 
 .tech-icons img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 .card-content ul {
@@ -636,7 +671,7 @@ body {
 }
 
 /* Responsive layout */
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
   .card-row {
     flex-direction: column;
   }
@@ -645,10 +680,28 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 20px;
+  }
+
+  .card-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 
   .card-image img {
-    margin: 0 0 20px 0
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    margin: 0;
+  }
+
+  .card-content {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -661,7 +714,7 @@ body {
 
 /* Projects Section */
 .projects-section {
-  padding: 60px 72px;
+  /* padding: 20px 72px; */
   background: transparent;
   color: #23243a;
   max-width: 1600px;
@@ -896,7 +949,7 @@ body {
 /* Experience Section  */ 
 
 .experience-section {
-  padding: 60px 72px;
+  /* padding: 60px 72px; */
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -1314,3 +1367,385 @@ body {
   }
 }
 
+
+
+
+/* Screen Adaptive Code  */
+/* 👇 Extra Responsive Tweaks */
+/* 
+@media (max-width: 1200px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-left, .intro-right {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .profile-img-wrapper {
+    width: 320px;
+    height: 320px;
+  }
+
+  .main-content {
+    margin-left: 100px;
+    padding: 80px 24px 32px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-vertical {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-items {
+    flex-direction: row;
+    flex: none;
+    gap: 20px;
+  }
+
+  .nav-profile,
+  .nav-footer {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 70px;
+    padding: 60px 16px 32px 16px;
+  }
+
+  .download-cv-btn {
+    top: 12px;
+    right: 12px;
+    padding: 6px 16px;
+  }
+
+  .footer-icons {
+    right: 20px;
+    bottom: 80px;
+    gap: 14px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.7rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .projects-section,
+  .experience-section,
+  .contact-section {
+    padding: 40px 16px;
+  }
+
+  .download-cv-btn {
+    font-size: 0.82rem;
+  }
+
+  .highlight-card,
+  .info-card,
+  .education-info-card {
+    padding: 18px;
+  }
+} */
+
+
+/* ===================== */
+/* ✅ GENERAL TWEAKS    */
+/* ===================== */
+@media (max-width: 1200px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-left,
+  .intro-right {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .profile-img-wrapper {
+    width: 320px;
+    height: 320px;
+  }
+
+  .main-content {
+    margin-left: 100px;
+    padding: 80px 24px 32px 24px;
+  }
+}
+
+/* ===================== */
+/* ✅ NAVBAR FIX (Mobile bottom bar) */
+/* ===================== */
+@media (max-width: 768px) {
+  .nav-vertical {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-items {
+    flex-direction: row;
+    flex: none;
+    gap: 20px;
+  }
+
+  .nav-profile,
+  .nav-footer {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 70px;
+    padding: 60px 16px 32px 16px;
+  }
+
+  .download-cv-btn {
+    top: 12px;
+    right: 12px;
+    padding: 6px 16px;
+  }
+
+  .footer-icons {
+    right: 20px;
+    bottom: 80px;
+    gap: 14px;
+    font-size: 18px;
+  }
+}
+
+/* ===================== */
+/* ✅ SECTION WRAPPING FIXES */
+/* ===================== */
+@media (max-width: 1024px) {
+  .card-row,
+  .education-card-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .info-card,
+  .education-info-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-grid {
+    gap: 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .experience-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .education-card-row,
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card,
+  .education-info-card {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .card-image img,
+  .education-image img,
+  .experience-card .card-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 16px;
+  }
+}
+
+/* ===================== */
+/* ✅ FINAL MOBILE TWEAKS */
+/* ===================== */
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.7rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .projects-section,
+  .experience-section,
+  .contact-section {
+    padding: 40px 16px;
+  }
+
+  .download-cv-btn {
+    font-size: 0.82rem;
+  }
+
+  .highlight-card,
+  .project-card,
+  .info-card,
+  .education-info-card,
+  .experience-card {
+    width: 95%;
+  }
+
+  .project-content h3,
+  .card-content h3,
+  .education-content h3,
+  .experience-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+/* 2nd */
+/* ✅ Adaptive for laptop widths */
+@media (max-width: 1280px) {
+  .education-image img {
+    max-width: 140px;
+    margin-right: 16px;
+  }
+
+  .education-info-card {
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .education-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .education-content ul,
+  .education-content p {
+    font-size: 1rem;
+  }
+}
+
+/* ✅ For narrower laptops/tablets */
+@media (max-width: 1000px) {
+  .education-card-row {
+    flex-direction: column;
+  }
+
+  .education-info-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .education-image img {
+    margin: 0 0 16px 0;
+  }
+
+  .education-content {
+    text-align: center;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .home-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .home-section h1 {
+    font-size: 2rem;
+  }
+
+  .home-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .scroll-down {
+    margin-top: 30px;
+  }
+
+  .follow-button {
+    margin: 16px auto;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .profile-image {
+    max-width: 180px;
+    width: 100%;
+    margin: 20px auto 0 auto;
+    display: block;
+  }
+
+  .profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 6px solid #4176FF;
+  }
+
+  .home-section .python-logo {
+    display: none; /* Optional: Hide python logo on mobile for cleanliness */
+  }
+}
