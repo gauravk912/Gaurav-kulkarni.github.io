@@ -1793,12 +1793,30 @@ body {
   text-decoration: none;
 }
 
-.project-card {
-  perspective: 1000px;
-  width: 100%;
-  max-width: 320px;
-  height: 100%;
-  min-height: 480px;
-  margin: 1rem;
-  position: relative;
+/* --- Responsive: Mobile adjustments --- */
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 90%;
+    min-height: 500px;
+  }
+
+  .project-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    max-width: 95%;
+    min-height: 520px;
+  }
+
+  .project-img {
+    height: 160px;
+  }
+
+  .project-links a {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
 }
