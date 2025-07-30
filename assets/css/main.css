@@ -517,7 +517,7 @@ body {
 }
 
 .philosophy-card .card-image img {
-  width: 240px;
+  width: 250%;
   height: auto;
   border-radius: 12px;
   margin-right: 24px;
@@ -537,7 +537,7 @@ body {
 }
 
 .philosophy-card .card-image img {
-  width: 400px;
+  width: 250%;
   max-width: 100%;
   height: auto;
   border-radius: 12px;
@@ -601,8 +601,7 @@ body {
   transform: scale(1.02);
 }
 .card-image img {
-  width: 300px;
-  height: auto;
+  width: 200px;
   border-radius: 12px;
   margin-right: 24px;
 }
@@ -778,7 +777,7 @@ body {
 
 .project-img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1771,7 +1770,7 @@ body {
 .project-img {
   /* width: 100%; */
   width: calc(100% - 1.5rem);
-  height: 200px;
+  height: 40%;
   border-radius: 8px;
    /* Adds space below the image */
   margin-top: 0.7rem;  /* Optional: Adds space above */
