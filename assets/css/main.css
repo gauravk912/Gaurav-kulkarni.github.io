@@ -260,7 +260,7 @@ body {
 }
 
 /* Animation for tech icons */
-@keyframes flyInAndFade {
+/* @keyframes flyInAndFade {
   0% {
     transform: translate(var(--start-x), var(--start-y)) scale(1.4);
     opacity: 0;
@@ -278,6 +278,28 @@ body {
   }
   100% {
     transform: translate(30%, 30%) scale(0.7);
+    opacity: 0;
+  }
+} */
+
+@keyframes flyInAndFade {
+  0% {
+    transform: translate(var(--start-x), var(--start-y)) scale(1.2);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    transform: translate(20px, 20px) scale(1.2);
+    opacity: 0.8;
+  }
+  85% {
+    transform: translate(25px, 25px) scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(30px, 30px) scale(0.8);
     opacity: 0;
   }
 }
@@ -325,6 +347,7 @@ body {
   .tech-icon {
     width: 40px;
     height: 40px;
+    overflow-x: hidden;
   }
 }
 
@@ -650,6 +673,7 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 12px;
+  overflow-x: hidden;
 }
 
 .tech-icons img {
@@ -886,6 +910,7 @@ body {
   gap: 10px;
   margin-bottom: 12px;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
 .tech-icons img {
@@ -1955,6 +1980,7 @@ body {
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 10px;
+  overflow-x: hidden;
 }
 
 .tech-icons img {
@@ -2027,4 +2053,90 @@ body {
   #searchBox {
     width: 100%;
   }
+}
+
+
+
+
+
+
+/* === Flip Card Effect === */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card-front {
+  z-index: 2;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.project-card {
+  min-height: 480px; /* Ensure height for flip */
+  position: relative;
+}
+
+.flip-card-inner {
+  height: 100%;
+}
+
+.project-content ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.project-content ul li {
+  font-size: 0.9rem;
+  color: #2b2e3a;
+  margin-bottom: 6px;
+}
+
+
+.project-card {
+  position: relative;
+  min-height: 420px; /* Ensures height for both front and back */
+  display: block;
+}
+
+.flip-card-inner {
+  height: 100%;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }

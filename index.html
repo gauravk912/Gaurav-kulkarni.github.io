@@ -73,33 +73,36 @@
       <div class="intro">
         <div class="intro-left">
           <h1>
-  Hello,<br />
+            Hello,<br />
+            I am <span id="typed-text"></span><span id="cursor">|</span>
+            <!-- </h1>
+          <h1>
   I am <span id="typed-text"></span><span id="cursor">|</span>
-</h1>
-          <div class="divider"></div>
-          <div class="subtitle">
-            <p>
-              🚀 I’m a builder by heart — of ideas, models, systems, and
-              sometimes, travel plans. Whether I’m training an AI model,
-              studying classic chess strategies, or exploring a new city with a
-              book in hand, I’m driven by curiosity and a deep love for
-              learning.
-            </p>
-            <p>
-              💡 As a International FIDE-rated chess player and a lifelong
-              student of self-growth, I approach both tech and life with focus,
-              creativity, and purpose.
-            </p>
-            <p>
-              💻 I’m now seeking full-time opportunities where I can turn ideas
-              into impact — blending data, code, and a passion for solving
-              real-world problems.
-            </p>
-          </div>
-          <!-- <button class="follow-btn" href="https://www.linkedin.com/in/gykulkarni/">LinkedIn</button> -->
-          <a href="https://www.linkedin.com/in/gykulkarni/" target="_blank" rel="noopener noreferrer">
-            <button class="follow-btn">LinkedIn</button>
-          </a>
+</h1> -->
+            <div class="divider"></div>
+            <div class="subtitle">
+              <p>
+                🚀 I’m a builder by heart of ideas, models, systems, and
+                sometimes, travel plans. Whether I’m training an AI model,
+                studying classic chess strategies, or exploring a new city with a
+                book in hand, I’m driven by curiosity and a deep love for
+                learning.
+              </p>
+              <p>
+                💡 As a International FIDE-rated chess player and a lifelong
+                student of self-growth, I approach both tech and life with focus,
+                creativity, and purpose.
+              </p>
+              <p>
+                💻 I’m now seeking full-time opportunities where I can turn ideas
+                into impact — blending data, code, and a passion for solving
+                real-world problems.
+              </p>
+            </div>
+            <!-- <button class="follow-btn" href="https://www.linkedin.com/in/gykulkarni/">LinkedIn</button> -->
+            <a href="https://www.linkedin.com/in/gykulkarni/" target="_blank" rel="noopener noreferrer">
+              <button class="follow-btn">LinkedIn</button>
+            </a>
 
         </div>
         <div class="intro-right" id="animated-logo-wrapper">
@@ -175,7 +178,7 @@
             <ul>
               <li>⚡ Scalable deep learning/statistical models</li>
               <li>⚡ Computer Vision & NLP projects</li>
-              <li>⚡ Time series forecasting & modeling</li>
+              <li>⚡ Agentic AI and MLOps</li>
             </ul>
           </div>
         </div>
@@ -196,8 +199,8 @@
             </div>
             <ul>
               <li>⚡ Front-end dev using React/Redux</li>
-              <li>⚡ Apps using Flutter, React Native & Kotlin</li>
-              <li>⚡ Backends with Node, Express, Flask</li>
+              <li>⚡ Apps/Website using Flutter and MERN Stack</li>
+              <li>⚡ Backend with Node, Express, Flask</li>
             </ul>
           </div>
         </div>
@@ -206,7 +209,7 @@
 
 
     <!-- Projects Section   -->
-    <section class="projects-section" id="projects">
+    <!-- <section class="projects-section" id="projects">
       <h2 class="section-title">My Projects</h2>
       <p class="section-subtitle">Explore a collection of my recent work across various technologies and domains.</p>
 
@@ -255,24 +258,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card" data-tags="web javascript ecommerce node react">
-          <img src="assets/img/Data-science.png" class="project-img" alt="" />
-          <div class="project-content">
-            <h3>E-commerce Platform</h3>
-            <p>Built a scalable full-stack eCommerce platform with React & Node.js.</p>
-            <div class="tags"><span>React</span><span>Node</span><span>Web</span></div>
-            <div class="tech-icons">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-            </div>
-            <div class="project-links">
-              <a href="#">🔗 Source Code</a>
-              <a href="#">🌐 Live Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-tags="data spark aws engineering">
+        <div class="project-card" data-tags="ai">
           <img src="assets/img/Data-science.png" class="project-img" alt="" />
           <div class="project-content">
             <h3>ETL Data Pipeline</h3>
@@ -280,6 +266,7 @@
             <div class="tags"><span>Data</span><span>AWS</span><span>ETL</span></div>
             <div class="tech-icons">
 
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" />
             </div>
             <div class="project-links">
               <a href="#">🔗 Source Code</a>
@@ -287,14 +274,140 @@
             </div>
           </div>
         </div>
-
-
-
       </div>
 
+    </section> -->
+
+
+    <section class="projects-section" id="projects">
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-subtitle">Explore a collection of my recent work across various technologies and domains.</p>
+
+      <div class="filter-search-container">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai">AI & ML</button>
+          <button class="filter-btn" data-filter="data">Data Engineering</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+        </div>
+        <input type="text" id="searchBox" placeholder="🔍 Search projects..." />
+      </div>
+
+      <div class="projects-grid" id="projectList">
+
+        <!-- Web Project -->
+        <div class="project-card flip-card" data-tags="web javascript ecommerce node react">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/img/Data-science.png" class="project-img" alt="" />
+              <div class="project-content">
+                <h3>E-commerce Platform</h3>
+                <p>Built a scalable full-stack eCommerce platform with React & Node.js.</p>
+                <div class="tags"><span>React</span><span>Node</span><span>Web</span></div>
+                <div class="tech-icons">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                </div>
+                <div class="project-links">
+                  <a href="#">🔗 Source Code</a>
+                  <a href="#">🌐 Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="project-content">
+                <h3>Project Highlights</h3>
+                <ul style="margin-bottom: 12px; padding-left: 18px;">
+                  <li>Responsive MERN stack application</li>
+                  <li>User authentication & authorization</li>
+                  <li>Product catalog with cart & checkout</li>
+                  <li>Payment integration with Stripe</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#">🔗 Source Code</a>
+                  <a href="#">🌐 Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Engineering Project -->
+        <div class="project-card flip-card" data-tags="data spark aws engineering">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/img/Data-science.png" class="project-img" alt="" />
+              <div class="project-content">
+                <h3>ETL Data Pipeline</h3>
+                <p>Engineered a real-time data pipeline with Apache Spark & AWS Lambda.</p>
+                <div class="tags"><span>Data</span><span>AWS</span><span>ETL</span></div>
+                <div class="tech-icons">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" />
+                </div>
+                <div class="project-links">
+                  <a href="#">🔗 Source Code</a>
+                  <a href="#">🌐 Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="project-content">
+                <h3>Project Highlights</h3>
+                <ul style="margin-bottom: 12px; padding-left: 18px;">
+                  <li>Real-time stream processing</li>
+                  <li>Apache Spark with AWS Lambda</li>
+                  <li>Kafka → Spark → S3 architecture</li>
+                  <li>Monitored with CloudWatch dashboards</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#">🔗 Source Code</a>
+                  <a href="#">🌐 Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- AI Project -->
+        <div class="project-card flip-card" data-tags="ai machinelearning nlp python">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/img/Data-science.png" class="project-img" alt="" />
+              <div class="project-content">
+                <h3>AI Chatbot</h3>
+                <p>Built an NLP-powered chatbot using transformer models and Python.</p>
+                <div class="tags"><span>AI</span><span>NLP</span><span>Python</span></div>
+                <div class="tech-icons">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                </div>
+                <div class="project-links">
+                  <a href="#">🔗 Source Code</a>
+                  <a href="#">🌐 Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="project-content">
+                <h3>Project Highlights</h3>
+                <ul style="margin-bottom: 12px; padding-left: 18px;">
+                  <li>Built with HuggingFace transformers</li>
+                  <li>Fine-tuned for customer support tasks</li>
+                  <li>Context-aware multi-turn conversation</li>
+                  <li>Python & Flask backend deployment</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#">🔗 Source Code</a>
+                  <a href="#">🌐 Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </section>
-
-
 
     <!-- Experience Section -->
     <section class="experience-section" id="experience">
@@ -545,6 +658,9 @@
         <p>Made by Gaurav Kulkarni 🚀</p>
       </div>
     </section>
+
+    
+
   </div>
 
 

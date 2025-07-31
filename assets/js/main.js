@@ -151,36 +151,36 @@ animateTechIcons();
 // });
 
 
-const filterButtons = document.querySelectorAll('.filter-btn');
-  const searchBox = document.getElementById('searchBox');
-  let currentFilter = 'all';
+// const filterButtons = document.querySelectorAll('.filter-btn');
+//   const searchBox = document.getElementById('searchBox');
+//   let currentFilter = 'all';
 
-  function filterProjects() {
-    const searchValue = searchBox.value.toLowerCase();
+//   function filterProjects() {
+//     const searchValue = searchBox.value.toLowerCase();
 
-    document.querySelectorAll('.project-card').forEach(card => {
-      const tags = card.getAttribute('data-tags').toLowerCase().split(' ');
-      const text = card.innerText.toLowerCase();
+//     document.querySelectorAll('.project-card').forEach(card => {
+//       const tags = card.getAttribute('data-tags').toLowerCase().split(' ');
+//       const text = card.innerText.toLowerCase();
 
-      const matchesFilter = currentFilter === 'all' || tags.includes(currentFilter);
-      const matchesSearch = text.includes(searchValue);
+//       const matchesFilter = currentFilter === 'all' || tags.includes(currentFilter);
+//       const matchesSearch = text.includes(searchValue);
 
-      card.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
-    });
-  }
+//       card.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+//     });
+//   }
 
-  // Handle filter button click
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      currentFilter = button.getAttribute('data-filter').toLowerCase();
-      filterProjects();
-    });
-  });
+//   // Handle filter button click
+//   filterButtons.forEach(button => {
+//     button.addEventListener('click', () => {
+//       document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+//       button.classList.add('active');
+//       currentFilter = button.getAttribute('data-filter').toLowerCase();
+//       filterProjects();
+//     });
+//   });
 
-  // Handle search input
-  searchBox.addEventListener('input', filterProjects);
+//   // Handle search input
+//   searchBox.addEventListener('input', filterProjects);
 
 // Scroll Animation for project cards
 const cards = document.querySelectorAll('.project-card');
@@ -240,9 +240,10 @@ const typedText = document.getElementById("typed-text");
   const cursor = document.getElementById("cursor");
 
   const phrases = [
-    "Gaurav Kulkarni",
     "an AI/ML Enthusiast",
-    "Exploring Agentic AI"
+    "Exploring Agentic AI",
+    "Software MERN-Stack Developer",
+    "Building Full-Stack Applications"
   ];
 
   let phraseIndex = 0;
@@ -281,3 +282,37 @@ const typedText = document.getElementById("typed-text");
       cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
     }, 500);
   });
+
+
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+  const searchBox = document.getElementById('searchBox');
+  let currentFilter = 'all';
+
+  function filterProjects() {
+    const searchValue = searchBox.value.toLowerCase();
+
+    document.querySelectorAll('.project-card').forEach(card => {
+      const tags = card.getAttribute('data-tags')?.toLowerCase().split(' ') || [];
+
+      // Get the title from front of flip card
+      const titleEl = card.querySelector('.flip-card-front h3');
+      const projectTitle = titleEl ? titleEl.innerText.toLowerCase() : '';
+
+      const matchesFilter = currentFilter === 'all' || tags.includes(currentFilter);
+      const matchesSearch = projectTitle.includes(searchValue);
+
+      card.style.display = (matchesFilter && matchesSearch) ? 'flex' : 'none';
+    });
+  }
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      currentFilter = button.getAttribute('data-filter').toLowerCase();
+      filterProjects();
+    });
+  });
+
+  searchBox.addEventListener('input', filterProjects);
