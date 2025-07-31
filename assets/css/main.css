@@ -865,8 +865,8 @@ body {
 
 .project-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 120%;
+  object-fit: fit;
 }
 
 .project-content {
@@ -921,7 +921,9 @@ body {
 .project-links {
   display: flex;
   gap: 20px;
+  margin-bottom: 5px;
 }
+
 
 .project-links a {
   text-decoration: none;
@@ -1753,7 +1755,7 @@ body {
 .project-img {
   /* width: 100%; */
   width: calc(100% - 1.5rem);
-  height: 40%;
+  height: 60%;
   border-radius: 8px;
    /* Adds space below the image */
   margin-top: 0.7rem;  /* Optional: Adds space above */
@@ -1929,10 +1931,10 @@ body {
 /* Image */
 .project-img {
   width: calc(100% - 1.4rem);
-  height: 170px;
+  height: 190px;
   border-radius: 8px;
   margin: 0.6rem;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 /* Content */
@@ -1963,6 +1965,7 @@ body {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 9px;
+  padding: 5px;
 }
 
 .tags span {
@@ -1993,7 +1996,7 @@ body {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 1px;
+  margin-bottom: 5px;
 }
 
 .project-links a {
@@ -2002,6 +2005,7 @@ body {
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 0.9rem;
+  margin-bottom: 5px;
 }
 
 .project-links a:hover {
@@ -2139,4 +2143,8 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+.flip-card-front .project-content{
+  padding: 10px;
 }
