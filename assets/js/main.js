@@ -240,6 +240,7 @@ const typedText = document.getElementById("typed-text");
   const cursor = document.getElementById("cursor");
 
   const phrases = [
+    "Gaura Kulkarni",
     "an AI/ML Enthusiast",
     "Exploring Agentic AI",
     "Software MERN-Stack Developer",
